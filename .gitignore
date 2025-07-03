@@ -1,0 +1,38 @@
+# ==============================
+# 🔙 Java Spring Boot (Backend)
+# ==============================
+wishlist-backend/target
+wishlist-backend/.classpath
+wishlist-backend/.project
+wishlist-backend/.settings
+wishlist-backend/src/main/resources/serviceAccountKey.json
+
+# ==========================
+# 🌐 React (Frontend)
+# ==========================
+wishlist-frontend/node_modules
+wishlist-frontend/.env
+
+# ==========================
+# 🚫 Common OS & Editor files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# 📦 General Node + Build Rules
+# ==========================
+/node_modules
+/.pnp
+.pnp.js
+/coverage
+/build
+
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
