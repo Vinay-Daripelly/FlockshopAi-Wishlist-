@@ -76,6 +76,12 @@ wishlist-backend/src/main/resources/serviceAccountKey.json
 cd wishlist-backend
 mvn clean install
 mvn spring-boot:run
+
+i have used mainly Eclipse IDE to run the springboot backend application
+Open Eclipse IDE
+Open this backend as a project
+Maven local repositiries will be added
+Then run the applicatiob by clicking run button on top menu
 ```
 
 📡 Your backend server should now be running at: `http://localhost:8090`
