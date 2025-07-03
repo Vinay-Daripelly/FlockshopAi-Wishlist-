@@ -57,30 +57,34 @@ cd FlockshopAi-Wishlist-
 
 ---
 
-### 2️⃣ Run the Backend (`wishlist-backend`)
+### 2️⃣ Setup Firebase Admin Key
+
+- Download your Firebase service account key from Firebase Console
+- Place it in the backend folder:
+
+```bash
+wishlist-backend/src/main/resources/serviceAccountKey.json
+```
+
+✅ Make sure this file is NOT committed (it's excluded by .gitignore)
+
+---
+
+### 3️⃣ Run the Backend (Spring Boot)
 
 ```bash
 cd wishlist-backend
-```
-
-🛠️ **Setup**:
-- Place your `serviceAccountKey.json` in:
-  ```
-  src/main/resources/serviceAccountKey.json
-  ```
-
-▶️ **Start Server**:
-
-```bash
 mvn clean install
 mvn spring-boot:run
 ```
 
-📡 API runs at: `http://localhost:8090`
+📡 Your backend server should now be running at: `http://localhost:8090`
 
 ---
 
-### 3️⃣ Run the Frontend (`wishlist-frontend`)
+### 4️⃣ Run the Frontend (React App)
+
+Open a new terminal window and run:
 
 ```bash
 cd wishlist-frontend
@@ -88,7 +92,15 @@ npm install
 npm start
 ```
 
-🌐 App runs at: `http://localhost:3000`
+🌐 React app will open at: `http://localhost:3000`
+
+---
+
+### 5️⃣ Sign Up & Test
+
+- Visit the frontend in your browser
+- Sign up or log in with Firebase Authentication
+- Create wishlists, invite collaborators, add items
 
 ---
 
