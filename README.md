@@ -59,12 +59,72 @@ cd FlockshopAi-Wishlist-
 
 ### 2️⃣ Setup Firebase Admin Key
 
-- Download your Firebase service account key from Firebase Console
-- Place it in the backend folder:
 
-```bash
+Follow these steps to generate the required Firebase credentials (`serviceAccountKey.json`) and connect your backend to Firebase:
+
+---
+
+### 🧱 Step 1: Create a Firebase Project
+
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Click on **"Add Project"**
+3. Give your project a name (e.g., `FlockShop Wishlist`)
+4. Disable Google Analytics (optional) and click **Create Project**
+
+---
+
+### 🔥 Step 2: Add a Firebase App
+
+1. Inside your Firebase project dashboard, click **Project Settings (⚙️ icon in top left)**
+2. Scroll down to **"Your apps"**
+3. Click **“\</>” to create a Web App**
+4. Give it a name (e.g., `wishlist-app`) and register
+
+📌 *This step is needed for frontend authentication .*
+
+---
+
+### 🗂️ Step 3: Enable Firestore
+
+1. In the left sidebar, click **“Firestore Database”**
+2. Click **Create database**
+3. Choose **Start in test mode** (for development)
+4. Select location and click **Enable**
+
+---
+
+### 🛡️ Step 4: Enable Authentication (Email/Password)
+
+1. Go to **"Authentication"** in the left sidebar
+2. Click **"Get Started"**
+3. Under **Sign-in method**, enable **Email/Password**
+
+---
+
+### 📁 Step 5: Generate `serviceAccountKey.json`
+
+1. Go to **Project Settings (⚙️) > Service Accounts**
+2. Click **“Generate new private key”**
+3. It will download a JSON file — rename it to `serviceAccountKey.json`
+
+> **Keep it secure! Do not upload this file to GitHub.**
+
+---
+
+### 📦 Step 6: Add it to your Backend
+
+Place the downloaded file at:
+
+```
 wishlist-backend/src/main/resources/serviceAccountKey.json
 ```
+
+---
+
+### 
+
+
+
 
 ✅ Make sure this file is NOT committed (it's excluded by .gitignore)
 
