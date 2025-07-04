@@ -12,7 +12,7 @@ import java.io.FileInputStream;
 public class WishlistBackendApplication {
 
 	public static void main(String[] args) {
-		initializeFirebase(); // ✅ call before app starts
+		initializeFirebase(); 
 		SpringApplication.run(WishlistBackendApplication.class, args);
 	}
 
@@ -27,10 +27,10 @@ public class WishlistBackendApplication {
 
 			if (FirebaseApp.getApps().isEmpty()) {
 				FirebaseApp.initializeApp(options);
-				System.out.println("✅ Firebase Initialized from main()");
+				System.out.println("Firebase Initialized from main() !");
 			}
 		} catch (Exception e) {
-			System.err.println("❌ Firebase init failed in main:");
+			System.err.println("Firebase init failed in main:");
 			e.printStackTrace();
 		}
 	}
