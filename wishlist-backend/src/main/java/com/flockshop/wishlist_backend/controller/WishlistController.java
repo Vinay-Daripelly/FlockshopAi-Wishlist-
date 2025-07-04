@@ -4,7 +4,6 @@ import com.flockshop.wishlist_backend.model.ProductItem;
 import com.flockshop.wishlist_backend.model.Wishlist;
 import com.flockshop.wishlist_backend.service.WishlistService;
 import com.google.cloud.firestore.Firestore;
-import com.google.cloud.firestore.QueryDocumentSnapshot;
 import com.google.firebase.cloud.FirestoreClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
