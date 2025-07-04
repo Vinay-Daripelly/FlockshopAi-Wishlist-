@@ -45,3 +45,12 @@ export const removeCollaborator = async (wishlistId, email) => {
   const res = await axios.delete(`${BASE}/wishlists/${wishlistId}/collaborators/${email}`);
   return res.data;
 };
+
+export const renameWishlist = async (id, name) => {
+  return axios.put(`${BASE}/wishlists/${id}/rename`, { name });
+};
+
+export const deleteWishlist = async (id) => {
+  return axios.delete(`${BASE}/wishlists/${id}`);
+};
+

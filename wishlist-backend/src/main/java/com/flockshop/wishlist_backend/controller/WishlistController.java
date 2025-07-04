@@ -82,6 +82,27 @@ public class WishlistController {
             return ResponseEntity.status(500).body("Error: " + e.getMessage());
         }
     }
+    @PutMapping("/{id}/rename")
+    public ResponseEntity<?> renameWishlist(@PathVariable String id, @RequestBody Map<String, String> body) {
+        try {
+            String newName = body.get("name");
+            wishlistService.renameWishlist(id, newName);  // Implement this method
+            return ResponseEntity.ok("Wishlist renamed");
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body("Error: " + e.getMessage());
+        }
+    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteWishlist(@PathVariable String id) {
+        try {
+            wishlistService.deleteWishlist(id);  // Implement this method
+            return ResponseEntity.ok("Wishlist deleted");
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body("Error: " + e.getMessage());
+        }
+    }
+
+
 
     @PostMapping("/{id}/collaborators")
     public ResponseEntity<?> addCollaborator(@PathVariable String id, @RequestBody Map<String, String> body) {

@@ -57,4 +57,14 @@ public class WishlistService {
         wishlist.setItems(items);
         db.collection("wishlists").document(wishlistId).set(wishlist);
     }
+    public void renameWishlist(String id, String newName) throws Exception {
+        Firestore db = FirestoreClient.getFirestore();
+        db.collection("wishlists").document(id).update("name", newName);
+    }
+
+    public void deleteWishlist(String id) throws Exception {
+        Firestore db = FirestoreClient.getFirestore();
+        db.collection("wishlists").document(id).delete();
+    }
+
 }
